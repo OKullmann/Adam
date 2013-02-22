@@ -20,7 +20,7 @@
 In graph computational theory the graph colouring problem is a special assignment of which is traditionally assigned with colours. In the more common approach of the graph colouring problem is a way of colouring the vertices of an undirected graph such that no two adjacent vertices share the same colour.
 \end{mydef}
 
-There are three fundamental steps with the graph colouring process. The first is the decision process which we input a graph $\emph{G}$ with $\emph{n}$ vertices and choose an integer $\emph{K}$ where the graph colouring problem decision in yes. The example of the first case where the decision would be NP-complete would be the 3 colouring as shown below.
+There are two fundamental steps with the graph colouring process. The first is the decision process which we input a graph $\emph{G}$ with $\emph{n}$ vertices and choose an integer $\emph{K}$ where the graph colouring problem decision in yes. The example of the first case where the decision would be NP-complete would be the 3 colouring as shown below.
 
 
 
@@ -37,6 +37,48 @@ The next step with graph colouring would be the optimisation which the chromatic
 
 \vspace{3mm}
 The first example that I will show is that a complete graph $\emph{K}$$^{3}$ with $\emph{n}$ vertices is $\emph{n}$-colourable but not (n-1) colourable. This is shown below showing that $\emph{K}$$^{3}$ is not 2 colourable. Another rule we would have to follow would be that $\emph{K}$$_{n}$ has a vertex set $\lbrace$1,...,n$\rbrace$ and all possible $\frac{1}{2}$ $\emph{n}$ ($\emph{n}$-1) edges. I will look at another example to prove the chromatic number which will be the graph $\emph{K}$$_{4}$ with 4 vertices is 4 colourable as shown below:
+
+\begin{center}
+\includegraphics[scale=0.60]{not3colouring.png}
+\end{center}
+
+\vspace{3mm}
+
+\begin{center}
+\includegraphics[scale=0.60]{4colouring.png}
+\end{center}
+
+\vspace{3mm}
+On the other hand the same graph will not be $\emph{n}$-1 colourable (4-1 = 3 colourable). The graph above proves it's not 3 colourable as well as showig the graphs has the correct number of edges for a $\emph{K}$$_{4}$ graph. $\frac{1}{2}$ $\emph{n}$ ($\emph{n}$-1) edges = 2(3) = 6.
+
+\vspace{3mm}
+
+\subsection{SAT}
+
+\begin{mydef}
+An instance of SAT is a Boolean formula composed of $\emph{n}$ Boolean variables such as $\emph{X}$$_{1}$,$\emph{X}$$_{2}$,..., $\emph{X}$$_{n}$; and $\emph{m}$ Boolean connectives any Boolean function with one or two inputs and one output, such as $\bigwedge$ (AND), $\bigvee$ (OR), $\neg$ (NOT), $\rightarrow$ (implication), $\leftrightarrow$ (if and only if); and Parentheses (Without loss of generality, we assume that there are no redundant parentheses, i.e. there is at mose one pair of parentheses per Boolean connective).
+\end{mydef}
+
+As an example, I will show it with the following formula:
+
+$\phi$ = (($\emph{x}$$_{1}$ $\rightarrow$ $\emph{x}$$_{2}$) $\bigvee$ $\neg$ (($\emph{x}$$_{1}$ $\leftrightarrow$ $\emph{x}$$_{3}$) $\bigvee$ $\emph{x}$$_{4}$)) $\bigwedge$ $\neg$ $\emph{x}$$_{4}$
+
+
+Has the satisfying assignment $<$$\emph{x}$$_{1}$ = 0, $\emph{x}$$_{2}$ = 0, $\emph{x}$$_{3}$ = 1 and $\emph{x}$$_{4}$ = 1$>$
+
+= ((0 $\rightarrow$ 0) $\bigvee$ $\neg$(($\neg$0 $\leftrightarrow$ 1) $\bigvee$ 1)) $\bigwedge$ $\neg$0
+
+= (1 $\bigvee$ $\neg$(1 $\bigvee$ 1)) $\bigwedge$ 1
+
+= (1 $\bigvee$ 0) $\bigwedge$ 1
+
+= 1
+
+
+This shows that the following formula $\phi$ belongs to SAT [1].
+
+
+aa
 
 
 
