@@ -1,6 +1,6 @@
 
 \documentclass[a4paper]{report}
-\newtheorem{mydef}{Definition}
+\newtheorem{defi}{Definition}
 \newtheorem{myproof}{Proof}
 \usepackage{graphicx}
 \usepackage[T1]{fontenc}
@@ -18,9 +18,9 @@
 \chapter{Definition Of 8 Problems}
 
 \subsection{Graph Colouring}
-\begin{mydef}
+\begin{defi}
 In graph computational theory the graph colouring problem is a special assignment of which is traditionally assigned with colours. In the more common approach of the graph colouring problem is a way of colouring the vertices of an undirected graph such that no two adjacent vertices share the same colour.
-\end{mydef}
+\end{defi}
 
 There are two fundamental steps with the graph colouring process. The first is the decision process which we input a graph $\emph{G}$ with $\emph{n}$ vertices and choose an integer $\emph{K}$ where the graph colouring problem decision in yes. The example of the first case where the decision would be NP-complete would be the 3 colouring as shown below.
 
@@ -74,9 +74,9 @@ The truth table above shows for $\emph{K}$$_{3}$ can be reduced to 3CNF with the
 There is no legal 3-colouring of the above graph in which x, y and z are all coloured False but if any x, y, z are coloured True then there is a legal 3-colouring of the above graph.
 \subsection{SAT}
 
-\begin{mydef}
+\begin{defi}
 An instance of SAT is a Boolean formula composed of $\emph{n}$ Boolean variables such as $\emph{X}$$_{1}$,$\emph{X}$$_{2}$,..., $\emph{X}$$_{n}$; and $\emph{m}$ Boolean connectives any Boolean function with one or two inputs and one output, such as $\bigwedge$ (AND), $\bigvee$ (OR), $\neg$ (NOT), $\rightarrow$ (implication), $\leftrightarrow$ (if and only if); and Parentheses (Without loss of generality, we assume that there are no redundant parentheses, i.e. there is at mose one pair of parentheses per Boolean connective).
-\end{mydef}
+\end{defi}
 
 As an example, I will show it with the following formula:
 
@@ -102,9 +102,9 @@ The SAT problem is $\emph{P}$ when the number of literals in each clause is limi
 \vspace{3mm}
 The 3SAT is an extenstion of the SATISFIABILITY problem, where each clause must contain exactly 3 literals. The properties of 3SAT are as follow:
 
-\begin{mydef}
+\begin{defi}
 We transform SAT to 3SAT. Let $\lbrace$$u_{1}$,u$_{2}$,...,u$_{n}$$\rbrace$ be a set of variables and $\emph{C}$ = $\lbrace$c$_{1}$,c$_{2}$,...,c$_{n}$$\rbrace$ be a set of clauses making up an arbitrary instance of SAT. We shall construct a collection of $\emph{C'}$ of three-literal clauses on a set $\emph{U'}$ of variables such that $\emph{C'}$ is SATISFIABLE if and only if $\emph{C}$ is SATISFIABLE. [2]
-\end{mydef}
+\end{defi}
 
 Here is an example of a 3SAT Boolean logic in Conjunctive Normal Form;
 
@@ -149,9 +149,9 @@ Here is my proofjkb
 The Hamiltonian problem in mathematical field of graph theory are of the following two types. The Hamiltonian path problem and the Hamiltonian cycle which are problems of determining whether a given Hamiltonian path or a Hamiltonian cycle exists in a given graph. The Hamiltonian path problem and the Hamiltonian cycle problem are both NP-complete. 
 
 
-\begin{mydef}
+\begin{defi}
 Given a graph $\emph{G}$ = (V,E) our certificate is the sequence of $\vert$V$\vert$ vertices that make up the Hamiltonian cycle. The verification algorithm checks that this sequence contains each vertex in $\emph{V}$ exactly once and that with the first vertex repeated at the end, it forms a cycle $\emph{G}$. That is, it checks that there is and edge between each pair of consecutive vertices and between the first and the last vertices. This verification can be performed in polynomial time. [1]
-\end{mydef}
+\end{defi}
 
 \vspace{3mm}
 
@@ -186,9 +186,9 @@ The only other vertices in $\emph{V'}$ other than those of widgets are selector 
 \subsection{Vertex Cover }
 In mathematical discipline of graph theory, a vertex cover of a graph is a set of vertices such that each edge of the graph is incident to at least one vertex.
 
-\begin{mydef}
+\begin{defi}
 A vertex cover of an undirected graph $\emph{G}$ = ($\emph{V,E}$) is a subset $\emph{V'}$ $\subseteq$ $\emph{V}$ such that if (u,v) $\in$ $\emph{E}$, then $\emph{u}$ $\in$ $\emph{V'}$ or $\emph{v}$ $\in$ (or both). That is, each vertex "covers" its incident edges, and a vertex cover for $\emph{G}$ is a set of vertices that covers all edges in $\emph{E}$. The size of vertex cover is the number of vertices in it. [1]
-\end{mydef}
+\end{defi}
 
 \begin{center}
 \includegraphics[scale=1.11]{vertex1.png}
@@ -233,11 +233,11 @@ For the following clique $\lbrace$u,v,y$\rbrace$. The $\emph{V}$ vertex uses all
 \subsection{Clique}
 The clique problem refers to any of the problems related to finding particular complete subg-graphs, which are sets of elements where each pair of element is connected. The clique decision problem include the following, finding the maximum clique, which is a clique with the largest number of vertices. Also, finding the maximum weight clique in a weighted graph. Thirdly, listing all maximal cliques, which are cliques that cannot be enlarged. Finally, determining the decision problem which is testing whether a graph contains a clique larger than a given size.
 
-\begin{mydef}
+\begin{defi}
 The clique is an undirected graph $\emph{G}$ = (V,E) is a subset $\emph{V'}$ $\subseteq$ $\emph{V}$ of vertices, each pair of which is connected by an edge in $\emph{E}$. In other words, a clique is a complete subgraph of $\emph{G}$. The size of a clique is the number of vertices it contains. The clique problem is the optimization problem finding a clique of maximum size in a graph. As a decsion problem, we ask simply whether a clique of a given size $\emph{k}$ exists in the graph. The formal definitions is 
 
 CLIQUE = $\lbrace$$\langle$G,K$\rangle$ : G is a graph with a clique of size k $\rbrace$
-\end{mydef}
+\end{defi}
 
 \begin{center}
 \includegraphics[scale=0.80]{clique.png}
@@ -286,10 +286,10 @@ We claim that $\emph{V'}$ is a clique. For any two vertices $\emph{v}$$_{i}$$^{r
 
 \subsection{Sudoku}
 
-\begin{mydef}
+\begin{defi}
 A problem is given as a n$^{2}$ x n$^{2}$ grid which is divided into n x n subgrids. The value n is called order since the cells are filled with an integer from 1 through n$^{2}$ and the goal is to fill in all the blank cells so that each row, column and n x n subgrid has each of the integers from 1 through n$^{2}$ exactly once.
 
-\end{mydef}
+\end{defi}
 
 \begin{center}
 \includegraphics[scale=0.60]{sudoku.png}
