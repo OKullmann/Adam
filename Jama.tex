@@ -14,11 +14,12 @@
 
 \maketitle
 
+\tableofcontents
 
 \chapter{Definition Of 8 Problems}
 \label{cha:Definition8}
 
-\subsection{Graph Colouring}
+\section{Graph Colouring}
 \label{sec:GraphColouring}
 
 \begin{defi}\label{def:graphcolouring}
@@ -75,7 +76,10 @@ The truth table above shows for $\emph{K}$$_{3}$ can be reduced to 3CNF with the
 \end{center}
 
 There is no legal 3-colouring of the above graph in which x, y and z are all coloured False but if any x, y, z are coloured True then there is a legal 3-colouring of the above graph.
-\subsection{SAT}
+
+
+
+\section{SAT}
 
 \begin{defi}
 An instance of SAT is a Boolean formula composed of $\emph{n}$ Boolean variables such as $\emph{X}$$_{1}$,$\emph{X}$$_{2}$,..., $\emph{X}$$_{n}$; and $\emph{m}$ Boolean connectives any Boolean function with one or two inputs and one output, such as $\bigwedge$ (AND), $\bigvee$ (OR), $\neg$ (NOT), $\rightarrow$ (implication), $\leftrightarrow$ (if and only if); and Parentheses (Without loss of generality, we assume that there are no redundant parentheses, i.e. there is at mose one pair of parentheses per Boolean connective).
@@ -148,7 +152,10 @@ $\emph{S}$ = $\lbrace$1001001, 1000110, 101110, 10011, 11100, 2000, 100, 200, 10
 Here is my proofjkb  
 \end{proof}
 
-\subsection{Hamiltonian Problem}
+
+
+\section{Hamiltonian Problem}
+
 The Hamiltonian problem in mathematical field of graph theory are of the following two types. The Hamiltonian path problem and the Hamiltonian cycle which are problems of determining whether a given Hamiltonian path or a Hamiltonian cycle exists in a given graph. The Hamiltonian path problem and the Hamiltonian cycle problem are both NP-complete. 
 
 
@@ -186,7 +193,10 @@ The only other vertices in $\emph{V'}$ other than those of widgets are selector 
 \includegraphics[scale=0.85]{download.png}
 \end{center}
 
-\subsection{Vertex Cover }
+
+
+\section{Vertex Cover }
+
 In mathematical discipline of graph theory, a vertex cover of a graph is a set of vertices such that each edge of the graph is incident to at least one vertex.
 
 \begin{defi}
@@ -233,7 +243,8 @@ For the following clique $\lbrace$u,v,y$\rbrace$. The $\emph{V}$ vertex uses all
 
 
 
-\subsection{Clique}
+\section{Clique}
+
 The clique problem refers to any of the problems related to finding particular complete subg-graphs, which are sets of elements where each pair of element is connected. The clique decision problem include the following, finding the maximum clique, which is a clique with the largest number of vertices. Also, finding the maximum weight clique in a weighted graph. Thirdly, listing all maximal cliques, which are cliques that cannot be enlarged. Finally, determining the decision problem which is testing whether a graph contains a clique larger than a given size.
 
 \begin{defi}
@@ -287,7 +298,9 @@ The satisfying assignment of the formula has x2 = 0, x3 = 1 and x1 may be either
 
 We claim that $\emph{V'}$ is a clique. For any two vertices $\emph{v}$$_{i}$$^{r}$, $\emph{v}$$_{j}$$^{s}$, where r $\neq$ s, both corresponding literals $\emph{L}$$_{i}$$^{r}$, $\emph{L}$$_{j}$$^{s}$ are mapped to 1 by the given satisfying assignment and thus, by the construction of $\emph{G}$, the edge ($\emph{v}$$_{i}$$^{r}$,$\emph{v}$$_{j}$$^{s}$) belongs to $\emph{E}$. No edges in $\emph{G}$ connect vertices in the same triple, and so $\emph{V'}$ contains exactly one vertex per triple. Since $\emph{G}$ contains no edges between inconsistent literals each clause is satisfied, and so $\phi$ is satisfied. [1]
 
-\subsection{Sudoku}
+
+
+\section{Sudoku}
 
 \begin{defi}
 A problem is given as a n$^{2}$ x n$^{2}$ grid which is divided into n x n subgrids. The value n is called order since the cells are filled with an integer from 1 through n$^{2}$ and the goal is to fill in all the blank cells so that each row, column and n x n subgrid has each of the integers from 1 through n$^{2}$ exactly once.
