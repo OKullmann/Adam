@@ -71,6 +71,9 @@
 \end{defi}
 In other words, a grap colouring uses a colour-set $C$, and assigns to every vertex a ``colour'', that is, an element of $C$, such that adjacent vertices get different colours.
 
+\begin{examp}\label{exp:graphcolour}
+  XXX simple examples for graph colourings and graph-non-colourings XXX
+\end{examp}
 
 There are two fundamental steps with the graph colouring process. The first is the decision process which we input a graph $\emph{G}$ with $\emph{n}$ vertices and choose an integer $\emph{K}$ where the graph colouring problem decision in yes. The example of the first case where the decision would be NP-complete would be the 3 colouring as shown below.
 
@@ -82,6 +85,19 @@ There are two fundamental steps with the graph colouring process. The first is t
 
 The output of the decision would be whether or not the graph $\emph{G}$ admits a proper vertex colouring with $\emph{k}$ colours. There is also a special case where a graph is 2 colourable and can be be done in $\emph{P}$ (Polynomial-time) and this is were the particular graph that we're colouring is bipartite which is a particular graph whose vertices can be divided into two disjoint sets were every edge that connects a vertex in $\emph{U}$ to one in $\emph{V}$.
 
+\begin{defi}\label{def:chromaticnumber}
+  The \textbf{chromatic number} of a graph $G$, denoted by $\chi(G)$, is the smallest integer $k \ge 0$ such that $G$ has a $k$-colouring.
+\end{defi}
+
+\begin{examp}\label{exp:chi}
+  The three most trivial examples:
+  \begin{enumerate}
+  \item $\chi((\emptyset,\emptyset)) = 0$; in general we have $\chi(G) = 0$ if and only $V(G) = \emptyset$.
+  \item $\chi((\{1\},\emptyset)) = 1$; in general we have $\chi(G) = 1$ if and only if $E(G) = \emptyset$ and $V(G) \ne \emptyset$.
+  \item 
+  \end{enumerate}
+ . XXX
+\end{examp}
 The next step with graph colouring would be the optimisation which the chromatic number. The chromatic number refers to the smallest number of colours needed to colour a graph $\emph{G}$ is called the chromatic number and is often denoted by $\emph{X}$($\emph{G}$). With the optimisation process we will have an input of a graph $\emph{G}$ with $\emph{n}$ vertices. We will firstly have a look at the simplest form which is not bipartite. We have looked at this previously which is the triangle $\emph{K}$$^{3}$.
 
 The first example that I will show is that a complete graph $\emph{K}$$^{3}$ with $\emph{n}$ vertices is $\emph{n}$-colourable but not (n-1) colourable. This is shown below showing that $\emph{K}$$^{3}$ is not 2 colourable. Another rule we would have to follow would be that $\emph{K}$$_{n}$ has a vertex set $\lbrace$1,...,n$\rbrace$ and all possible $\frac{1}{2}$ $\emph{n}$ ($\emph{n}$-1) edges. I will look at another example to prove the chromatic number which will be the graph $\emph{K}$$_{4}$ with 4 vertices is 4 colourable as shown below:
