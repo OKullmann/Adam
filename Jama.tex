@@ -1,12 +1,14 @@
 \documentclass[a4paper]{report}
 
+
+\usepackage{graphicx}
+\usepackage{hyperref}
+
 \newtheorem{defi}{Definition}[section]
 \newtheorem{examp}[defi]{Example}
 
 \newtheorem{proof}{Proof}
 
-\usepackage{graphicx}
-\usepackage[T1]{fontenc}
 
 
 \begin{document}
@@ -57,7 +59,7 @@
 \label{sec:GraphColouring}
 
 \begin{defi}\label{def:graphcolouring}
-In graph computational theory the graph colouring problem is a special assignment of which is traditionally assigned with colours. In the more common approach of the graph colouring problem is a way of colouring the vertices of an undirected graph such that no two adjacent vertices share the same colour.
+  Consider a graph $G$ (recall Definition \ref{def:graph}).
 \end{defi}
 
 There are two fundamental steps with the graph colouring process. The first is the decision process which we input a graph $\emph{G}$ with $\emph{n}$ vertices and choose an integer $\emph{K}$ where the graph colouring problem decision in yes. The example of the first case where the decision would be NP-complete would be the 3 colouring as shown below.
