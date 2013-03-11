@@ -1,5 +1,12 @@
 \documentclass[a4paper]{report}
 
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{latexsym}
+\usepackage{stmaryrd}
+\usepackage{array}
+\usepackage{exscale}
 
 \usepackage{graphicx}
 \usepackage{hyperref}
@@ -9,6 +16,7 @@
 
 \newtheorem{proof}{Proof}
 
+\providecommand{\abs}[1]{\lvert #1 \rvert}
 
 
 \begin{document}
@@ -59,8 +67,10 @@
 \label{sec:GraphColouring}
 
 \begin{defi}\label{def:graphcolouring}
-  Consider a graph $G$ (recall Definition \ref{def:graph}).
+  Consider a graph $G$ (recall Definition \ref{def:graph}). A \textbf{colouring} of $G$ with colour-set $C$ is a map $f: V(G) \rightarrow C$ such that for each $\{u,v\} \in E(G)$ we have $f(u) \ne f(v)$. Such a colouring is called a \textbf{$k$-colouring} for some integer $k \ge 0$ if $\abs{C} \le k$. The default colour-set of a $k$-colouring is $\{1,\dots,k\}$.
 \end{defi}
+In other words, a grap colouring uses a colour-set $C$, and assigns to every vertex a ``colour'', that is, an element of $C$, such that adjacent vertices get different colours.
+
 
 There are two fundamental steps with the graph colouring process. The first is the decision process which we input a graph $\emph{G}$ with $\emph{n}$ vertices and choose an integer $\emph{K}$ where the graph colouring problem decision in yes. The example of the first case where the decision would be NP-complete would be the 3 colouring as shown below.
 
