@@ -1,6 +1,8 @@
 \documentclass[a4paper]{report}
 
-\newtheorem{defi}{Definition}
+\newtheorem{defi}{Definition}[section]
+\newtheorem{examp}[defi]{Example}
+
 \newtheorem{proof}{Proof}
 
 \usepackage{graphicx}
@@ -15,6 +17,38 @@
 \maketitle
 
 \tableofcontents
+
+
+
+\chapter{Preliminaries}
+\label{cha:Preliminaries}
+
+\section{Graph theory}
+\label{sec:prelimgraph}
+
+\begin{defi}\label{def:graph}
+  A \textbf{graph} is a pair $(V, E)$, where $V$ is the set of \textbf{vertices}, and $E$ is the set of \textbf{edges}, where an edge is a 2-element subset of $V$. Often a graph is denoted by $G = (V, E)$, and we may use $V(G) := V$ and $E(G) := E$.
+\end{defi}
+
+\begin{examp}\label{exp:exampgraph}
+  some simple examples for graphs, using mathematical notation, and additionally drawing them XXX
+  \begin{enumerate}
+  \item The empty graph $(\emptyset,\emptyset)$.
+  \item A graph with one vertex: $(\{1\}, \emptyset)$. Note that a graph with at most one vertex can not have an edge.
+  \item There are exactly two possible graphs $G$ with $V(G) = \{1,2\}$, namely with $E(G) = \emptyset$ or $E(G) = \{\{1,2\}\}$.
+  \end{enumerate}
+\end{examp}
+
+
+\section{Logic}
+\label{sec:prelimlogic}
+
+\begin{defi}\label{def:CNF}
+  \textbf{CNF} XXX
+\end{defi}
+
+
+
 
 \chapter{Definition Of 8 Problems}
 \label{cha:Definition8}
