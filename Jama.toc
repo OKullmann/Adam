@@ -1,0 +1,8 @@
+\contentsline {chapter}{\numberline {1}Definition Of 8 Problems}{2}
+\contentsline {section}{\numberline {1.1}Graph Colouring}{2}
+\contentsline {section}{\numberline {1.2}SAT}{4}
+\contentsline {section}{\numberline {1.3}Hamiltonian Problem}{6}
+\contentsline {section}{\numberline {1.4}Vertex Cover }{8}
+\contentsline {section}{\numberline {1.5}Clique}{9}
+\contentsline {section}{\numberline {1.6}Sudoku}{11}
+\contentsline {section}{\numberline {1.7}Latin Square}{13}
