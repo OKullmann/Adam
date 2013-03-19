@@ -7,7 +7,6 @@
 \usepackage{stmaryrd}
 \usepackage{array}
 \usepackage{exscale}
-
 \usepackage{graphicx}
 \usepackage{hyperref}
 
@@ -17,6 +16,7 @@
 \newtheorem{proof}{Proof}
 
 \providecommand{\abs}[1]{\lvert #1 \rvert}
+
 
 
 \begin{document}
@@ -200,10 +200,6 @@ $\emph{S}$ = $\lbrace$1001001, 1000110, 101110, 10011, 11100, 2000, 100, 200, 10
 
 
 
-\begin{proof}
-Here is my proofjkb  
-\end{proof}
-
 
 
 \section{Hamiltonian Problem}
@@ -214,8 +210,6 @@ The Hamiltonian problem in mathematical field of graph theory are of the followi
 \begin{defi}
 Given a graph $\emph{G}$ = (V,E) our certificate is the sequence of $\vert$V$\vert$ vertices that make up the Hamiltonian cycle. The verification algorithm checks that this sequence contains each vertex in $\emph{V}$ exactly once and that with the first vertex repeated at the end, it forms a cycle $\emph{G}$. That is, it checks that there is and edge between each pair of consecutive vertices and between the first and the last vertices. This verification can be performed in polynomial time. [1]
 \end{defi}
-
-
 
 The trivial graph on a single node is said to be a Hamiltonian cycle, but the connected graph on two nodes is not. The dodecahedron is also Hamiltonian but it's not the case that all graphs are Hamiltonian, for example a bipartite graph with odd number vertices is not Hamiltonian as shown below; 
 
@@ -402,5 +396,46 @@ For any (i,j) $\in$ $\emph{B}$, $\emph{S'}$(i,j) mod n equals 0.
 \item
 A square $\emph{L}$ defined by $\emph{L}$(i,j/n) = $\emph{S'}$(i,j)/n for all (i,j) $\in$ $\emph{B}$ is a Latin.[6]
 \end{itemize}
+
+The following Lemma holds for the reduction from Latin square $\emph{L}$ to Sudoku $\emph{S}$. As when $\emph{i}$ = $\emph{j}$ = 3 : (0 * 3 + 1 + 3) mod 9 = 4 (which yields 11 in base 3). Also when $\emph{i}$ = 5 and $\emph{j}$ = 7 : (2 * 3 + 1 + 7) mod 9 = 5 (which yields 12 in base 3). The rest of the 9 x 9 can be filled out other than those grids which are $\in$ $\emph{B}$ ($\perp$).
+
+\begin{center}
+\includegraphics[scale=0.70]{Sud.png}
+\end{center}
+
+The blanks are those grids where $\emph{B}$ = $\lbrace$(i,j) $\vert$ $\lfloor$$\frac{i}{n}$$\rfloor$ = 0 and (j mod n) = 0$\rbrace$. This holds for all 9 of the blank entries as when i = j = 0 : $\lfloor$0/3$\rfloor$ = 0 and (0 mod 3). The other numbers where the constraints for blanks hold would be 3 and 6.
+
+\begin{center}
+\includegraphics[scale=0.80]{Sud2.png}
+\end{center}
+
+The figure above shows a Latin square $\emph{L}$ which has been filled out such that each row and column contains each of the integers from 0 through to $\emph{n}$ - 1 exactly once. I would now need to create a Latin square $\emph{L}$ with the following blank number 0,3 and 6 which would look as follows;
+
+\begin{center}
+\includegraphics[scale=0.85]{Sud3.png}
+\end{center}
+
+This would then be blown up into the 9 x 9 Sudoku. As the first three blanks in the left column of the Sudoku will be the entries from the left column of the Latin square. Then the second three blanks of the Sudoku will be filled with the entries from the second column of the Latin. The next step would be the third three blanks of the Sudoku will be filled with the entries from the third column of the Latin square. The final process blowing up of the Sudoku would be convert the numbers from Binary to Tenary.
+
+The blown up Sudoku above shows that every Sudoku constraints hold such that every row, column and sub-grid contains integers from 0 through to n - 1 exactly once. 
+
+\begin{center}
+\includegraphics[scale=0.85]{Sud4.png}
+\end{center}
+
+\section{Latin Square}
+\label{sec:LatinSquare}
+
+\begin{defi}\label{def:latinsquare}
+A Latin square is a n x n grid in which some of the boxes are filled with numbers from 1 to n, there are also blanks such as the Sudoku that need to be filled, such that every row and column contains each of the n possible number. [6]. This is very much similar to Sudoku but the only difference is that Latin square don't have the small grid constraint. An example of Latin square looks as follows;
+\end{defi}
+
+\begin{center}
+\includegraphics[scale=0.85]{Sud5.png}
+\end{center}
+
+Lemma for a given partial Latin Square $\emph{L}$ or of order n we construct a Sudoku $\emph{S}$ as follows;
+
+S(i,j)
 
 \end{document}
