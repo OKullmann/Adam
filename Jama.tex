@@ -12,8 +12,9 @@
 
 \newtheorem{defi}{Definition}[section]
 \newtheorem{examp}[defi]{Example}
+\newtheorem{lemma}[defi]{Lemma}
 
-\newtheorem{proof}{Proof}
+\newenvironment{proof}{\noindent\textbf{Proof:}\;}{\par\noindent\ignorespacesafterend}
 
 \providecommand{\abs}[1]{\lvert #1 \rvert}
 
@@ -112,10 +113,14 @@ The first example that I will show is that a complete graph $\emph{K}$$^{3}$ wit
 
 On the other hand the same graph will not be $\emph{n}$-1 colourable (4-1 = 3 colourable). The graph above proves it's not 3 colourable as well as showig the graphs has the correct number of edges for a $\emph{K}$$_{4}$ graph. $\frac{1}{2}$ $\emph{n}$ ($\emph{n}$-1) edges = 2(3) = 6.
 
-The graph colouring problem is to determine the minimum number of colours needed to colour a given undirected graph. To prove that the 3 colouring graph problem is NP-complete we use a reduction from 3SAT. The smallest case is $\emph{K}$$^{3}$. 
+To prove that the 3-colouring graph problem is NP-complete we use a reduction from 3SAT.
 
+XXX proof from XXX
+\begin{lemma}\label{lem:red3sat3col}
+  There is a poly-time reduction from 3SAT (see Definition XXX) to 3COL (see Definition XXX).
+\end{lemma}
 \begin{proof}
-The set $\emph{V}$ consists of a vertex for each variable, a vertex for the negation of each variable, 5 vertices for each clause and 3 special vertices: True, False and Red. The edges of the graph are of two types: "literal" edges that are independentof the clauses and "clause" edges that depend on the clauses. The literals edges from trianle on the special vertices and also form a triangle on $\emph{X}$$_{i}$, $\neg$$\emph{X}$$_{i}$ and RED for $\emph{i}$ = 1, 2, ..., $\emph{n}$. [1] 
+The set $\emph{V}$ consists of a vertex for each variable, a vertex for the negation of each variable, 5 vertices for each clause and 3 special vertices: True, False and Red. The edges of the graph are of two types: "literal" edges that are independentof the clauses and "clause" edges that depend on the clauses. The literals edges from trianle on the special vertices and also form a triangle on $\emph{X}$$_{i}$, $\neg$$\emph{X}$$_{i}$ and RED for $\emph{i}$ = 1, 2, ..., $\emph{n}$.
 \end{proof}
 
 \begin{center}
